@@ -1,0 +1,5 @@
+# Bảo mật cơ bản cho Apache (XAMPP)
+Options -Indexes
+<FilesMatch "\.(sql|md|log|ini)$">
+  Require all denied
+</FilesMatch>

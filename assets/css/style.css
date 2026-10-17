@@ -1,0 +1,84 @@
+/* Thư viện Tri Thức - giao diện: xanh mực + vàng đồng, chữ có chân cho tiêu đề */
+:root{
+  --ink:#16304f; --ink-2:#0f2239; --blue:#2a62a8; --brass:#d29a1f; --brass-d:#a97800;
+  --paper:#f1f4f8; --line:#d5dde8; --text:#1d2733; --muted:#5d6b7c;
+  --bs-body-bg:var(--paper); --bs-body-color:var(--text); --bs-link-color:var(--blue); --bs-link-hover-color:var(--ink);
+  --bs-border-color:var(--line);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column;line-height:1.55}
+main{flex:1}
+h1,h2,h3,.h1,.h2,.h3{font-family:var(--serif);color:var(--ink);letter-spacing:.005em}
+h1{font-size:1.75rem}
+h2{font-size:1.3rem}
+a{text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+
+.app-nav{background:var(--ink);--bs-navbar-color:#cdd8e6;--bs-navbar-hover-color:#fff;--bs-navbar-active-color:#fff;--bs-navbar-brand-color:#fff;--bs-navbar-brand-hover-color:#fff;--bs-navbar-toggler-border-color:rgba(255,255,255,.4)}
+.app-nav .navbar-toggler-icon{filter:invert(1)}
+.app-nav .navbar-brand{font-family:var(--serif);font-size:1.25rem;display:flex;align-items:center;gap:.6rem}
+.app-nav .nav-link.active{box-shadow:inset 0 -3px 0 var(--brass)}
+.app-nav .dropdown-menu{border-radius:.35rem;border-color:var(--line)}
+.app-nav .dropdown-item.active,.app-nav .dropdown-item:active{background:var(--ink)}
+.spines{display:inline-flex;align-items:flex-end;gap:2px;height:22px}
+.spines i{display:block;width:6px;border-radius:1px;background:var(--brass)}
+.spines i:nth-child(1){height:16px}.spines i:nth-child(2){height:22px;background:#e9c46a}.spines i:nth-child(3){height:18px;background:#7fa7d6}
+
+.btn{border-radius:.35rem}
+.btn-primary{--bs-btn-bg:var(--ink);--bs-btn-border-color:var(--ink);--bs-btn-hover-bg:var(--ink-2);--bs-btn-hover-border-color:var(--ink-2);--bs-btn-active-bg:#0a1829;--bs-btn-active-border-color:#0a1829;--bs-btn-disabled-bg:var(--ink);--bs-btn-disabled-border-color:var(--ink)}
+.btn-outline-primary{--bs-btn-color:var(--ink);--bs-btn-border-color:var(--ink);--bs-btn-hover-bg:var(--ink);--bs-btn-hover-border-color:var(--ink);--bs-btn-active-bg:var(--ink);--bs-btn-active-border-color:var(--ink)}
+.btn-accent{background:var(--brass);border-color:var(--brass);color:#1b1400;font-weight:600}
+.btn-accent:hover{background:#e0a92b;border-color:#e0a92b;color:#1b1400}
+
+.page-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.25rem;padding-bottom:.9rem;border-bottom:2px solid var(--ink)}
+.page-head h1{margin:0}
+
+.card{border-color:var(--line);border-radius:.4rem;box-shadow:none}
+.card-header{background:#fff;font-family:var(--serif);color:var(--ink);font-weight:600;border-bottom-color:var(--line)}
+.table{--bs-table-bg:#fff;--bs-table-striped-bg:#f7f9fc}
+.table thead th{background:#e8edf4;color:var(--ink);font-weight:600;font-size:.9rem;white-space:nowrap;border-bottom:2px solid var(--ink)}
+.table td,.table th{vertical-align:middle}
+.table-wrap{background:#fff;border:1px solid var(--line);border-radius:.4rem;overflow:hidden}
+.form-label{font-weight:600;font-size:.9rem;color:var(--ink)}
+.form-text{color:var(--muted)}
+
+/* Phiếu tra cứu kiểu thẻ mục lục: điểm nhấn duy nhất của trang chủ */
+.catalog-card{position:relative;background:#fffdf6;border:1px solid #cfc7aa;border-radius:.3rem;padding:2.2rem 1.5rem 1.4rem;margin-top:1.1rem;
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,#dfe6f0 31px,#dfe6f0 32px);
+  box-shadow:0 1px 0 #cfc7aa,0 5px 0 -1px #f4efdc,0 6px 0 -1px #cfc7aa}
+.catalog-card::before{content:"";position:absolute;left:50%;bottom:.55rem;width:12px;height:12px;border-radius:50%;background:var(--paper);border:1px solid #cfc7aa;transform:translateX(-50%)}
+.catalog-tab{position:absolute;top:-1.1rem;left:1.5rem;background:var(--brass);color:#1b1400;font-family:var(--serif);font-weight:700;padding:.2rem 1rem;border-radius:.3rem .3rem 0 0;font-size:.95rem}
+.catalog-card .form-control,.catalog-card .form-select{background-color:#fff}
+.hero-copy{font-family:var(--serif);font-size:1.15rem;color:var(--ink);max-width:46ch}
+
+/* Bìa sách */
+.cover{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px 5px 5px 2px;border:1px solid rgba(0,0,0,.15);box-shadow:inset 6px 0 0 rgba(0,0,0,.12)}
+.cover-ph{display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,hsl(var(--h) 38% 32%),hsl(var(--h) 42% 22%));color:rgba(255,255,255,.9)}
+.cover-ph span{font-family:var(--serif);font-size:2.2rem;font-weight:700;letter-spacing:.04em}
+.cover-sm{width:44px}.cover-sm.cover-ph span{font-size:1rem}
+.cover-lg{max-width:260px}
+.book-card{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--line);border-radius:.4rem;padding:.8rem;text-decoration:none;color:inherit}
+.book-card:hover{border-color:var(--ink);color:inherit}
+.book-card .t{font-family:var(--serif);font-weight:600;color:var(--ink);line-height:1.3;margin:.7rem 0 .15rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.book-card .a{font-size:.85rem;color:var(--muted);margin-bottom:.5rem;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.book-card .meta{margin-top:auto;font-size:.82rem}
+
+.stat{background:#fff;border:1px solid var(--line);border-left:5px solid var(--ink);border-radius:.4rem;padding:.9rem 1.1rem;height:100%}
+.stat .n{font-family:var(--serif);font-size:1.9rem;color:var(--ink);line-height:1.1}
+.stat .l{color:var(--muted);font-size:.88rem}
+.stat.warn{border-left-color:var(--brass)} .stat.bad{border-left-color:#b3382c}
+.stat.bad .n{color:#b3382c}
+
+.app-footer{border-top:1px solid var(--line);padding:1rem 0;color:var(--muted);font-size:.85rem;background:#fff}
+.min-w-0{min-width:0}
+.scan-input{font-size:1.15rem;letter-spacing:.04em}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .no-print,.app-footer,.app-nav{display:none!important}
+  body{background:#fff}
+  .table-wrap{border:none}
+  .container{max-width:100%!important}
+  a{color:inherit;text-decoration:none}
+  .page-head{border-bottom:1px solid #000}
+}
