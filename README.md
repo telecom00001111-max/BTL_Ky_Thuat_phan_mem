@@ -8,6 +8,7 @@ Phân công chi tiết:
 Nguyễn Việt Quang : Dựng website, vẽ biểu đồ Use case
 Nguyễn Đình Quân : Dựng khung SRS, vẽ Sequence Diagram + ERD, Thuyết trình
 Nguyễn Tiến Vinh : Dựng Slide , viết mô tả chi tiết từng FR & NFR
+Link video thuyết trình : https://drive.google.com/file/d/1hGTZGjXHtzRuv439_UfPAo4GmiiD60YC/view?usp=sharing&t=7.388
 # 📚 Hệ thống quản lý thư viện sách
 
 ## 1. Giới thiệu dự án
