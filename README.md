@@ -1,4 +1,13 @@
 # BTL_Ky_Thuat_phan_mem
+Nhóm gồm 3 thành viên :
+22010132 – Nguyễn Việt Quang
+24103783 – Nguyễn Đình Quân <Trưởng nhóm>
+24100226 – Nguyễn Tiến Vinh
+
+Phân công chi tiết:
+Nguyễn Việt Quang : Dựng website, vẽ biểu đồ Use case
+Nguyễn Đình Quân : Dựng khung SRS, vẽ Sequence Diagram + ERD, Thuyết trình
+Nguyễn Tiến Vinh : Dựng Slide , viết mô tả chi tiết từng FR & NFR
 # 📚 Hệ thống quản lý thư viện sách
 
 ## 1. Giới thiệu dự án
